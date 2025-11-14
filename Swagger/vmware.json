@@ -5401,7 +5401,7 @@
         "name": "scriptOutputStreamType",
         "description": "Name of the desired output stream to return. If not provided, will return all. An empty array will return nothing",
         "x-ms-parameter-location": "method",
-        "in": "body",
+        "in": "query",
         "schema": {
           "type": "array",
           "items": {
@@ -6297,7 +6297,9 @@
       },
       "AddonProperties": {
         "description": "The properties of an addon",
-        "discriminator": "addonType",
+        "discriminator": {
+          "propertyName": "addonType"
+        },
         "properties": {
           "addonType": {
             "description": "The type of private cloud addon",
@@ -6871,7 +6873,9 @@
       },
       "WorkloadNetworkDhcpEntity": {
         "description": "Base class for WorkloadNetworkDhcpServer and WorkloadNetworkDhcpRelay to inherit from",
-        "discriminator": "dhcpType",
+        "discriminator": {
+          "propertyName": "dhcpType"
+        },
         "properties": {
           "dhcpType": {
             "description": "Type of DHCP: SERVER or RELAY.",
@@ -7695,7 +7699,9 @@
         }
       },
       "ScriptExecutionParameter": {
-        "discriminator": "type",
+        "discriminator": {
+          "propertyName": "type"
+        },
         "description": "The arguments passed in to the execution",
         "properties": {
           "name": {
