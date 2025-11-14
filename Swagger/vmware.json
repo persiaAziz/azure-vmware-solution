@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://management.azure.com",
+      "url": "https://avsrp.eastus2.avsstage.azure.com",
       "description": "Azure Resource Manager"
     }
   ],
